@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre Pilas en Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #B4CF66; 
+            color: #146152;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #d32f2f; 
+            text-align: center;
+        }
+
+        h2 {
+            color: #e65100; 
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #B4CF66; 
+            padding: 20px;
+            border-radius: 0px;
+            
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        button {
+  background-color: #44803F; 
+  color: #B4CF66;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0px; 
+  padding: 20px;
+}
+button:hover {
+  background-color: #146152; 
+  transform: scale(1.05); 
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Pilas en Java</h1>
+    <h2>¿Qué es una Pila?</h2>
+    <p>Una pila es una estructura de datos que sigue el principio LIFO (Last In, First Out), lo que significa que el último elemento agregado es el primero en ser retirado.</p>
+    
+    <h2>Operaciones Principales</h2>
+    <ul>
+        <li><strong>push:</strong> Agrega un elemento a la cima de la pila.</li>
+        <li><strong>pop:</strong> Elimina y retorna el elemento en la cima de la pila.</li>
+        <li><strong>peek:</strong> Retorna el elemento en la cima de la pila sin eliminarlo.</li>
+        <li><strong>isEmpty:</strong> Verifica si la pila está vacía.</li>
+    </ul>
+    
+    <h2>Implementación de Pilas en Java</h2>
+    <p>En Java, se puede utilizar la clase <code>Stack</code> de la biblioteca estándar para trabajar con pilas. Aquí hay un ejemplo simple:</p>
+    <pre>
+<code>import java.util.Stack;
+
+public class EjemploPila {
+    public static void main(String[] args) {
+        Stack<Integer> pila = new Stack<>();
+        
+        // Agregar elementos
+        pila.push(1);
+        pila.push(2);
+        pila.push(3);
+        
+        // Mostrar el elemento en la cima
+        System.out.println("Elemento en la cima: " + pila.peek());
+        
+        // Retirar el elemento
+        System.out.println("Elemento retirado: " + pila.pop());
+        
+        // Verificar si la pila está vacía
+        System.out.println("¿La pila está vacía? " + pila.isEmpty());
+    }
+}
+</code>
+    </pre>
+</div>
+<button onclick="window.location.href='inf.html'">Regresar</button>
+        <button onclick="window.location.href='portada.html'">Inicio</button>
+</body>
+</html>

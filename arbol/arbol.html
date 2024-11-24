@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerarquía de Árbol</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    background-color: #B4CF66;
+}
+
+pre {
+    background-color: #B4CF66; 
+    padding: 10px;
+    
+    overflow-x: auto;
+}
+
+h1, h2, h3 {
+    color: #146152; 
+}
+button {
+  background-color: #8c9e54; 
+  color: #352f00;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0px; 
+  padding: 20px;
+}
+button:hover {
+  background-color: #FF5A33; 
+  transform: scale(1.05); 
+}
+    </style>
+</head>
+<body>
+
+    <h1>Jerarquía de Árbol</h1>
+    <p>En java, una <strong>jerarquía de árbol</strong> es una estructura de datos que organiza los elementos en una forma jerárquica, 
+       donde hay un nodo "raíz" en la cima y varios "nodos hijos"conectados en distintos niveles.
+       Cada nodo puede tener múltiples hijos, pero solo un nodo padre, lo que lo convierte en una estructura no cíclica.</p>
+
+    <h2>Implementación de una Jerarquía de Árbol en Python</h2>
+
+    <pre><code>import java.util.ArrayList;
+        import java.util.List;
+        
+        class Node<T> {
+            T data;
+            List<Node<T>> children;
+        
+            public Node(T data) {
+                this.data = data;
+                this.children = new ArrayList<>();
+            }
+        
+            public void addChild(Node<T> child) {
+                this.children.add(child);
+            }
+        }
+        
+        class Tree<T> {
+            Node<T> root;
+        
+            public Tree(T rootData) {
+                root = new Node<>(rootData);
+            }
+        
+            public void addChild(Node<T> parent, Node<T> child) {
+                parent.addChild(child);
+            }
+        
+            // Método para imprimir el árbol en forma jerárquica
+            public void printTree(Node<T> node, String prefix) {
+                System.out.println(prefix + node.data);
+                for (Node<T> child : node.children) {
+                    printTree(child, prefix + "--");
+                }
+            }
+        }
+        
+        public class TreeExample {
+            public static void main(String[] args) {
+                // Crear un árbol con un nodo raíz
+                Tree<String> tree = new Tree<>("CEO");
+        
+                // Crear nodos para agregar a la jerarquía
+                Node<String> vp1 = new Node<>("Vicepresidente de Marketing");
+                Node<String> vp2 = new Node<>("Vicepresidente de Ventas");
+                Node<String> vp3 = new Node<>("Vicepresidente de Tecnología");
+        
+                // Agregar nodos hijos al nodo raíz
+                tree.addChild(tree.root, vp1);
+                tree.addChild(tree.root, vp2);
+                tree.addChild(tree.root, vp3);
+        
+                // Crear y agregar más nodos a la jerarquía
+                Node<String> marketingManager = new Node<>("Gerente de Marketing");
+                Node<String> salesManager = new Node<>("Gerente de Ventas");
+                Node<String> techManager = new Node<>("Gerente de Tecnología");
+        
+                tree.addChild(vp1, marketingManager);
+                tree.addChild(vp2, salesManager);
+                tree.addChild(vp3, techManager);
+        
+                // Imprimir la jerarquía del árbol
+                System.out.println("Jerarquía del Árbol:");
+                tree.printTree(tree.root, "");
+            }
+        }
+        
+</code></pre>
+
+    <h2>¿Qué es una Jerarquía de Árbol?</h2>
+    <p>Una jerarquía de árbol es una estructura de datos que organiza elementos de manera jerárquica, similar a un árbol genealógico o un organigrama. En esta estructura:</p>
+    <ul>
+        <li><strong>Nodo raíz:</strong>Es el nodo inicial o "raíz" de la jerarquía, el punto de partida del árbol.</li>
+        <li><strong>Nodos hijos</strong>: Cada nodo puede tener varios nodos "hijos" conectados a él, formando una estructura en niveles o capas. Los nodos sin hijos se llaman nodos hoja.</li>
+        <li><strong>Niveles</strong>: Los elementos se distribuyen en diferentes niveles o "profundidades", y cada nivel representa una capa en la jerarquía.</li>
+       
+    </ul>
+
+    <h2>¿Para qué sirve la Jerarquía de Árbol?</h2>
+    <ul>
+        <li><strong>Organización de datos</strong>: Permite almacenar datos de manera estructurada, facilitando la
+            búsqueda y recuperación.</li>
+        <li><strong>Modelado de relaciones</strong>: Se puede usar para representar relaciones jerárquicas en sistemas del mundo real, como una organización empresarial, un directorio de archivos, o un sistema de menús.</li>
+        <li><strong>Facilita la navegación</strong>: Estructuras como los sistemas de archivos en computadoras son un
+            ejemplo donde la jerarquía de árbol permite una navegación sencilla.</li>
+        <li><strong>Eficiencia de búsqueda</strong>: Algunas estructuras de árbol, como los árboles binarios de
+            búsqueda, mejoran la eficiencia de las operaciones de búsqueda, inserción y eliminación.</li>
+        <li><strong>Árboles de decisión</strong>: Se utilizan en la toma de decisiones, clasificando datos en
+            varias categorías a través de preguntas que definen diferentes caminos en el árbol.</li>
+    </ul>
+
+    <p>En resumen, la jerarquía de árbol es fundamental en diversas aplicaciones en computación y matemáticas,
+        proporcionando una forma intuitiva y eficiente de organizar y gestionar datos.</p>
+        <button onclick="window.location.href='inf.html'">Regresar</button>
+        <button onclick="window.location.href='portada.html'">Inicio</button>
+</body>
+</html>

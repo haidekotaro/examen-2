@@ -1,0 +1,91 @@
+body {
+  font-family: 'Matura MT Script Capitals', cursive, sans-serif; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #023535; 
+  color:#fff; 
+}
+
+h1 {
+  color: #008F8C; 
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #001a19; 
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px;
+  border-radius: 0px; 
+  border: 2px solid #015958; 
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #015958; 
+  outline: none; 
+}
+
+button {
+  background-color: #008F8C; 
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+button:hover {
+  background-color: #008F8C; 
+  transform: scale(1.05); 
+}
+
+#treeContainer {
+  overflow-x: auto; 
+  width: 100%; 
+  margin-top: 20px;
+  padding: 10px; 
+}
+
+#tree {
+  display: inline-flex; 
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+
+.node {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 20px; 
+  background-color: #D8FFDB; 
+  text-align: center;
+  border: 3px solid #008F8C; 
+  font-size: 14px; 
+  color: #015958; 
+  box-shadow: 0 4px 12px #023535(255, 127, 80, 0.5); 
+  transition: transform 0.3s ease;
+  max-width: 200px; 
+  overflow: auto; 
+}
+
+.node:hover {
+  transform: scale(1.1); 
+  background-color: #D8FFDB; 
+}
+
+.branches {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 30px; 
+}

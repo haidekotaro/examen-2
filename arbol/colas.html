@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colas en Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #B4CF66; 
+            color: #146152; /* texto informativo  */
+        }
+        header {
+            background-color: #B4CF66; /* fondo del titulo */
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #B4CF66; 
+            border: 1px solid #B4CF66;/* cuerpo */
+            border-radius: 5px;
+        }
+        h1 {
+            color: #146152; /* titulo */
+        }
+        button {
+  background-color: #44803F; 
+  color: #FFEC5C;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0px; 
+  padding: 20px;
+}
+button:hover {
+  background-color: #146152; /* color de seleccionar botones  */
+  transform: scale(1.05); 
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Colas en Java</h1>
+</header>
+
+<section>
+    <h2>¿Qué es una Cola?</h2>
+    <p>
+
+        En Java, una cola es una estructura de datos FIFO (First In, First Out), donde el primer elemento en entrar es el primero en salir. La interfaz Queue en Java define métodos clave para manejar colas
+        add(e): Agrega un elemento (lanza excepción si está llena).
+        offer(e): Similar a add, pero devuelve false si falla.
+        poll(): Retira y devuelve el primer elemento, o null si está vacía.
+        peek(): Muestra el primer elemento sin retirarlo, o null si está vacía.    </p>
+
+    <h2>Implementaciones Comunes</h2>
+    <ul>
+       <pre>
+             LinkedList: Cola básica, permite inserciones y eliminaciones rápidas.
+             PriorityQueue: Cola de prioridad, ordena elementos en lugar de usar FIFO.
+             ArrayDeque: Cola eficiente, admite inserciones y eliminaciones en ambos extremos.
+      </pre>
+
+    <h2>Ejemplo rapido</h2>
+
+        <pre>
+           <code> Queuestring queue = new LinkedList<>();
+            queue.add("A");
+            queue.offer("B");
+            System.out.println(queue.poll()); // Retira y muestra "A"
+            System.out.println(queue.peek()); // Muestra "B" sin retirarlo</code>
+        </pre>    
+   
+</section>
+<button onclick="window.location.href='inf.html'">Regresar</button>
+        <button onclick="window.location.href='portada.html'">Inicio</button>
+
+</body>
+</html>
